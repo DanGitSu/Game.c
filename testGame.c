@@ -11,10 +11,26 @@
 
 #define DEFAULT_DICE {9,10,8,12,6,5,3,11,3,11,4,6,4,7,9,2,8,10,5}
 
-void tests(void)
+int tests(Game g);
+
+void testGetDiscipline(Game g, int regionID)
 
 int main() {
+	int disciplines[] = DEFAULT_DISCIPLINES;
+    int dice[] = DEFAULT_DICE;
+    Game g = newGame (disciplines, dice);
+    tests(g);
+    disposeGame(g);
+    printf("All tests passed!\n");
+    return EXIT_SUCCESS;
+}
 
+int tests() {
+	testGetDiscipline()
+	printf("All tests passed!\n")
+	return 1;
+}
 
-	return EXIT_SUCCESS;
+void testGetDiscipline(Game g, int regionID) {
+	assert(1 == 1);
 }
