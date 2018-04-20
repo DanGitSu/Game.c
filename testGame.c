@@ -46,6 +46,12 @@ void testMakeAction (Game g, action a) {
 	// Can't be implemented
 }
 
+void testgetDiceValue (Game g, int regionID);{
+	int actualDiceValue = g.dice[regionID];
+	int testDiceValue = getDiceValue(g,regionID);
+	assert(actualDiceValue == testDiceValue);
+}
+
 void testThrowDice (Game g) {
 	int currentTurn = g.currentTurn;
 	ThrowDice(g);
@@ -124,8 +130,3 @@ int testgetExchangeRate (Game g, int player, int disciplineFrom, int disciplineT
 
 }
 
-void testgetDiceValue (Game g, int regionID);{
-	int actualDiceValue = g.dice[regionID];
-	int testDiceValue = getDiceValue(g,regionID);
-	assert(actualDiceValue == testDiceValue);
-}
