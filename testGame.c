@@ -43,8 +43,83 @@ void testDisposeGame (Game g) {
 }
 
 void testMakeAction (Game g, action a) {
+	// Can't be implemented
+}
+
+void testThrowDice (Game g) {
 	int currentTurn = g.currentTurn;
-	makeAction(g);
+	ThrowDice(g);
 	assert(g.currentTurn == (currentTurn + 1));
 }
 
+void testGetTurnNumber(Game g) {
+	// Test throw dice first
+	int previousTurn = g.currentTurn;
+	g.ThrowDice();
+	assert((previousTurn+1) == g.currentTurn);
+}
+
+void testGetMostARCs (Game g) {
+	// Can't be implemented
+}
+
+void testGetMostPublications (Game g) {
+	// Can't be implemented
+}
+
+void testGetWhoseTurn (Game g) {
+	// Can't be implemented
+}
+
+void testGetCampus(Game g, path pathToVertex) {
+	// Can't be implemented
+}
+
+void testGetARC(Game g, path pathToEdge) {
+	// Can't be implemented
+}
+
+void testIsLegalAction (Game g, action a) {
+	// Can't be implemented
+
+}
+
+void testGetKPIpoints (Game g, int player) {
+	// Can't be implemented
+
+}
+
+void testGetARCs (Game g, int player) {
+	// Can't be implemented
+
+}
+
+int testGetGO8s (Game g, int player) {
+	// Can't be implemented
+
+}
+
+int testGetCampuses (Game g, int player) {
+	// Can't be implemented
+
+}
+
+int testGetIPs (Game g, int player) {
+	// Can't be implemented
+
+}
+
+int testGetPublications (Game g, int player) {
+	// Can't be implemented
+
+}
+
+int testGetStudents (Game g, int player, int discipline) {
+	// Can't be implemented
+
+}
+
+int testgetExchangeRate (Game g, int player, int disciplineFrom, int disciplineTo) {
+	// Can't be implemented
+
+}
