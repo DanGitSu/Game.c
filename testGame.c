@@ -32,5 +32,19 @@ int tests() {
 }
 
 void testGetDiscipline(Game g, int regionID) {
-	assert(1 == 1);
+	int actualDiscipline = g.disciplines[regionID];
+	int testDiscipline = getDiscipline(g,regionID)
+	assert(actualDiscipline == testDiscipline);
 }
+
+void testDisposeGame (Game g) {
+	disposeGame(g);
+	assert(g == 0);
+}
+
+void testMakeAction (Game g, action a) {
+	int currentTurn = g.currentTurn;
+	makeAction(g);
+	assert(g.currentTurn == (currentTurn + 1));
+}
+
